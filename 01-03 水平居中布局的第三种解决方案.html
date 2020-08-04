@@ -26,8 +26,9 @@
         * 如果父级元素开启了定位的话，当前元素是相对于父级元素定位的
        */
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 50%;  /*是子元素的左边离父元素的左边有50%的距离 还要往左再平移半个子元素的宽度,才能达到居中*/
+      transform: translateX(-50%); /*往左再平移半个子元素的宽度*/
+      /* transform: translateX(-100px);  */
     }
   </style>
 </head>
