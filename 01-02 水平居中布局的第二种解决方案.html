@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>水平居中布局的第一种解决方案</title>
+  <title>水平居中布局的第二种解决方案</title>
   <style>
     #parent {
       width: 100%;
@@ -17,17 +17,18 @@
       width: 200px;
       height: 200px;
       background: #c9394a;
-      /* display的值为table和block */
+      /* display的值为table和block，这两个值都可以实现居中，而inline不行 div默认给的display值就是block */
       display: table;
       /* 
         margin属性:外边距
-        * 一个值 - 上右下左
-        * 二个值 - 第一个表示上下，第二个表示左右
-          * auto - 表示根据浏览器自动分配
-        * 三个值 - 第一个表示上，第二个表示左右，第三个表示下
-        * 四个值 - 上右下左
-       */
-      margin: 0 auto;
+          值有四种设置方式
+        * 1、只设置一个值 - 上右下左
+        * 2、只设置二个值 - 第一个表示上下，第二个表示左右
+          * auto - 表示根据浏览器自动分配，而浏览器会等分左右外边距
+        * 3、三个值 - 第一个表示上，第二个表示左右，第三个表示下
+        * 4、四个值 - 上右下左
+      */
+      margin: 0 auto;   /*上下值为0  左右值为auto*/
 
       position: absolute;
     }
