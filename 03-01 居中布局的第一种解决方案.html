@@ -11,8 +11,8 @@
       width: 1000px;
       height: 600px;
       background: #ccc;
-      /* <td> */
-      display: table-cell;
+      /* <td>单元格 */
+      display: table-cell;  /* 父级单元格 */
       vertical-align: middle;
     }
 
@@ -20,9 +20,10 @@
       width: 200px;
       height: 200px;
       background: #c9394a;
-      /* <table> */
-      display: block;
-      margin: 0 auto;
+      /* <table> 表格*/
+      /*其实table也是可以的,但是table是表格元素，td是单元格元素，单元格应该是表格的一部分，可现在却是父级设置为了单元格，子级设置为了表格，有点不合理*/
+      display: block;  
+      margin: 0 auto; 
     }
   </style>
 </head>
